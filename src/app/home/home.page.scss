@@ -34,7 +34,12 @@
 
 .content{
   position: relative;
+  display: table;
   height: 100%;
   background-color: navy;
-  border-radius: 12px;
+  align-content: center;
+}
+.container{
+  display: table-cell;
+  vertical-align: middle;
 }

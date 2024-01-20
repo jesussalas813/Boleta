@@ -1,0 +1,31 @@
+<swiper-slide>
+      <h1 class="red-title">Titulo 1</h1>
+      <p>
+        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impreso
+      </p>
+      <img src="https://www.nationalgeographic.com.es/medio/2022/12/12/aguila-2_d7d2206b_221212153725_310x310.jpg"/>
+      <p>Swipe para continuar</p>
+    </swiper-slide>
+
+https://www.adobe.com/es/products/firefly.html 
+unbourding de acorde al estilo de la aplicación 
+para el viernes 
+git config --global user.email "YOUR_EMAIL"
+git config --global user.name "YOUR_NAME"
+gti add .
+git commit -m "proyecto"
+git push -u origin main
+
+git config --global credential.useremail jdsalas813@gmail.com
+
+slides = [
+    {
+      title: "Welcome to the Docs!",
+      description: "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
+      image: "../../assets/images/1.webp",
+      help_text: "For more information on Ionic, please see <a href='https://ionicframework.com/docs/'>our docs</a>.",
+    },
+    {
+      title: "What is Ionic?",
+      description: "<b>Ionic Framework</b> is an open source SDK that enables developers to
+https://codeshare.io/DZjbrE

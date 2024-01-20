@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage-angular';
 import { register } from 'swiper/element/bundle';
 register();
 
@@ -9,5 +10,12 @@ register();
   
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private storage: Storage) {
+  }
+  
+  async ngOnInit() {
+    // If using a custom driver:
+    // await this.storage.defineDriver(MyCustomDriver)
+    await this.storage.create();
+  }
 }

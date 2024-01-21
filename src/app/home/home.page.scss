@@ -1,6 +1,5 @@
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -26,20 +25,29 @@
   text-decoration: none;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} 
-
-.content{
-  position: relative;
-  display: table;
+.home {
+  background: #DD8A12;
   height: 100%;
-  background-color: navy;
-  align-content: center;
 }
-.container{
-  display: table-cell;
-  vertical-align: middle;
+.title{
+  display: flex;
+  align-items: end;
+  text-align: center;
+  height: 50%;
+}
+
+h1{
+  font-size: 28px;
+  color: #FFFFFF;
+}
+
+.foot {
+  display: flex;
+  align-items: end;
+  text-align: center;
+  height: 50%;
+}
+
+.bottom {
+  width: 100%;
 }

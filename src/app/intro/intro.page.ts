@@ -15,10 +15,11 @@ export class IntroPage implements OnInit {
       image: "../../assets/images/tikets.png",
       description: "<b>¡ La opotunidad de conseguir tu boleta !</b> a la felicidad al alcance de un click",
       help_text: "<b>¡ Registrate ahora para empezar a comprar tus boletas ! </b>"
+      
     },
     {
       title: "Easy to use !",
-      description: "Consulta tus eventos favoritos.",
+      description: "Consulta tus eventos favoritos y aparta tus entradas.",
       head: "../../assets/images/etapa.png",
       help_text: "For more information on Ionic, please see <a href='https://ionicframework.com/docs/'>our docs</a>.",
       class:""

@@ -8,7 +8,7 @@
     <swiper-slide *ngFor="let slide of slides; let i = index">
       <div *ngIf="i ==0">
         <h1 class="red-title">{{slide.title}}</h1>
-        <img class="head" src={{slide.head}} />
+        <div class="item"><img class="head" src={{slide.head}} /></div>
         <ion-grid>
           <ion-row>
             <ion-col>

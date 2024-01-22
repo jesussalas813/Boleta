@@ -21,14 +21,16 @@ export class IntroPage implements OnInit {
       title: "Easy to use !",
       description: "Consulta tus eventos favoritos y aparta tus entradas.",
       head: "../../assets/images/etapa.png",
-      help_text: "For more information on Ionic, please see <a href='https://ionicframework.com/docs/'>our docs</a>.",
+      help_text: "<b>Consigue las boletas a los eventos que no te puedes perder tan facil como 1,2,3,4.</b> ",
+      image: "../../assets/images/teatro.png",
+      image1: "../../assets/images/concierto.png",
       class:""
     },
     {
-      title: "",
-      description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
-      image: "../../assets/images/3.webp",
-      help_text: "For more information on Ionic, please see <a href='https://ionicframework.com/docs/'>our docs</a>.",
+      title: "All events in one place",
+      description: "No esperes mas registrate y empieza a disfrutar",
+      image: "../../assets/images/estadio.png",
+      help_text: "Desde eventos deportivos, peliculas, obras de teatros, conciertos, fiestas, etc. entra y busca el evento de tu preferencia",
       
     }
   ]

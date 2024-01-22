@@ -22,7 +22,7 @@
         <p class="text" [innerHTML]="slide.help_text"> </p>
       </div>
       <div *ngIf=" i == 1">
-        <h1 class="red-title">{{slide.title}}</h1>
+        <h1 class="red-title" >{{slide.title}}</h1>
         <div class="item"><img src={{slide.head}} /></div>
         <ion-grid>
           <ion-row>
@@ -34,20 +34,14 @@
             </ion-col>
           </ion-row>
         </ion-grid>
+        <div class="item"><img src={{slide.image1}} /></div>
+              <p class="text" [innerHTML]="slide.help_text"> </p>
       </div>
       <div *ngIf="i == 2">
         <h1 class="red-title">{{slide.title}}</h1>
-        <p>{{slide.help_text}}</p>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <p class={{slide.class}} [innerHTML]="slide.description"></p>
-            </ion-col>
-            <ion-col class="icons">
-              <img src={{slide.image}} />
-            </ion-col>
-          </ion-row>
-        </ion-grid>
+        <p class="text">{{slide.help_text}}</p>
+        <div class="item"><img src={{slide.image}} /></div>
+        <p class="text" [innerHTML]="slide.description"></p>
       </div>
     </swiper-slide>
   </swiper-container>

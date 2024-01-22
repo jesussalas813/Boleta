@@ -1,30 +1,54 @@
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <swiper-container
-  [loop]="true"
-  [pagination]="true"
-  >
+  <ion-fab slot="fixed" horizontal="end" [edge]="true">
+    <ion-fab-button (click)="goToHome()">
+      <ion-icon name="close-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <swiper-container [loop]="true">
     <swiper-slide *ngFor="let slide of slides; let i = index">
-      <h1 class="red-title">{{slide.title}}</h1>
-      <p class={{slide.class}} [innerHTML]="slide.description"></p>
-      <img src={{slide.image}}/>
-      <p>{{slide.help_text}}</p>
-      <p *ngIf=" i == 1">i: {{i}} estoy en el segundo slide</p>
-      <ion-button *ngIf="i == 3">Hola mundo</ion-button>
-      <div *ngIf="i == 0">
-        <h1>{{slide.title}}</h1>
-        <img src={{slide.image}}/>
+      <div *ngIf="i ==0">
+        <h1 class="red-title">{{slide.title}}</h1>
+        <img class="head" src={{slide.head}} />
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <p class={{slide.class}} [innerHTML]="slide.description"></p>
+            </ion-col>
+            <ion-col class="icons">
+              <img src={{slide.image}} />
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <p class="text" [innerHTML]="slide.help_text"> </p>
       </div>
-      <div *ngIf="i == 1">
-        <h1>{{slide.description}}</h1>
+      <div *ngIf=" i == 1">
+        <h1 class="red-title">{{slide.title}}</h1>
+        <div class="item"><img src={{slide.head}} /></div>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <p class={{slide.class}} [innerHTML]="slide.description"></p>
+            </ion-col>
+            <ion-col class="icons">
+              <img src={{slide.image}} />
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <div *ngIf="i == 2">
+        <h1 class="red-title">{{slide.title}}</h1>
         <p>{{slide.help_text}}</p>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <p class={{slide.class}} [innerHTML]="slide.description"></p>
+            </ion-col>
+            <ion-col class="icons">
+              <img src={{slide.image}} />
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </div>
-  
     </swiper-slide>
-    
   </swiper-container>
 </ion-content>

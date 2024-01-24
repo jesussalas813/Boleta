@@ -40,6 +40,10 @@ export class IntroPage implements OnInit {
     console.log("go to intro");
     this.router.navigateByUrl('/home')
   }
+  goToLogin(){
+    console.log("go to intro");
+    this.router.navigateByUrl('/login')
+  }
 
   ngOnInit() {
   }

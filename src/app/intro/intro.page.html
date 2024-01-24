@@ -42,7 +42,7 @@
         <p class="text">{{slide.help_text}}</p>
         <div class="item"><img src={{slide.image}} /></div>
         <p class="text" [innerHTML]="slide.description"></p>
-          <ion-button size="large" color="light" class="bottom" fill="outline" >Ver Intro</ion-button>
+          <ion-button size="large" color="light" class="bottom" fill="outline" (click)="goToLogin()" >Ver Intro</ion-button>
       </div>
     </swiper-slide>
   </swiper-container>

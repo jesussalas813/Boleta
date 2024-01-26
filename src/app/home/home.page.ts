@@ -11,10 +11,16 @@ import { Storage } from '@ionic/storage-angular';
 export class HomePage {
 
   constructor(
+<<<<<<< HEAD
     private router: Router,
     private storage: Storage
     ){}
     
+=======
+    private router:Router,
+    private storage: Storage
+    ) {}
+>>>>>>> 4ab301e3f92fd5737942fb5d2ca11e9b56bb5deb
   goToIntro(){
     console.log("go to intro");
     this.router.navigateByUrl('/intro');

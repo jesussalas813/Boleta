@@ -10,8 +10,7 @@ register();
   
 })
 export class AppComponent {
-  constructor(private storage: Storage) {
-  }
+  constructor(private storage: Storage) {}
   
   async ngOnInit() {
     // If using a custom driver:

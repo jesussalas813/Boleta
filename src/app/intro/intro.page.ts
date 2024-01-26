@@ -40,9 +40,15 @@ export class IntroPage implements OnInit {
     console.log("go to intro");
     this.router.navigateByUrl('/home')
   }
+
   goToLogin(){
     console.log("go to intro");
     this.router.navigateByUrl('/login')
+  }
+
+  ionViewDidEnter() {
+    console.log("Ya entre y vi la intro");
+    // Vamos a guardar en el storage que ya vio la intro
   }
 
   ngOnInit() {

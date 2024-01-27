@@ -51,19 +51,10 @@ export class IntroPage   {
     this.router.navigateByUrl('/login')
   }
 
-<<<<<<< HEAD
-  ionViewDidEnter() {
-    console.log("Ya entre y vi la intro");
-    // Vamos a guardar en el storage que ya vio la intro
-  }
-
-  ngOnInit() {
-=======
   ionViewDidEnter (){
     this.storage.set('mostreLaIntro', true);
 
     
->>>>>>> 4ab301e3f92fd5737942fb5d2ca11e9b56bb5deb
   }
 
   

@@ -21,8 +21,6 @@ export class LoginGuard implements CanActivate {
       this.navController.navigateForward('/login');
       return false;
     }
-    
-    return true;
   }
    
 }

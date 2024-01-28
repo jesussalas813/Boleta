@@ -13,8 +13,11 @@ export class LoginPage implements OnInit {
   loginForm: FormGroup;
   validation_messages ={
     email:[
-      {type: "required", message:"El Email es obligatorio."},
-      {type: "pattern", message: "El Email ingresado no es valido."}
+      {type: "required", message:'El Email es obligatorio.'},
+      {type: "pattern", message:'El Email ingresado no es valido.'}
+    ],
+    password:[
+     {type: "minlength", message:"La contraseña es muy corta." }
     ]
   }
   loginMessage: any;
@@ -37,7 +40,13 @@ export class LoginPage implements OnInit {
       ),
       password: new FormControl(
         "",
-        
+        Validators.compose([
+          Validators.minLength(8),
+          Validators.required,
+          Validators.pattern(
+            "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$"
+          )
+        ])
       )  
     })
   }

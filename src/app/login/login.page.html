@@ -1,32 +1,40 @@
-
-
 <ion-content [fullscreen]="true">
   <ion-header [translucent]="true">
     <ion-toolbar>
       <ion-title>login</ion-title>
     </ion-toolbar>
   </ion-header>
-  <br>  
-  <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)" >
-    <ion-item>
-      <ion-input label="Solid input" label-placement="floating" fill="solid" placeholder="Enter text" formControlName="email" ></ion-input>
-    </ion-item>
-    <div>
-      <ng-container *ngFor="let validation of validation_messages.email" >
-        <div *ngIf="
-        (loginForm.get('email')?.hasError(validation.type) &&
-        loginForm.get('email')?.dirty) ||
-        loginForm.get('email')?.touched
-        ">{{validation.message}}</div>
-      </ng-container>
+  <div class="login ">
+    <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+      <ion-item>
+        <ion-input label="Email" label-placement="floating" fill="outline" placeholder="Enter email"
+          formControlName="email"></ion-input>
+      </ion-item>
+      <div>
+        <ng-container *ngFor="let validation of validation_messages.email">
+          <div *ngIf="
+            (loginForm.get('email')?.hasError(validation.type) &&
+            loginForm.get('email')?.dirty)
+            ">{{validation.message}}</div>
+        </ng-container>
+      </div>
+      <br>
+      <ion-item>
+        <ion-input label="Solid input" label-placement="floating" fill="solid" placeholder="Enter text" type="password"
+          formControlName="password"></ion-input>
+      </ion-item>
+      <div>
+        <ng-container *ngFor="let validation of validation_messages.password">
+          <div *ngIf="
+            (loginForm.get('password')?.hasError(validation.type) &&
+            loginForm.get('password')?.dirty)
+            ">{{validation.message}}</div>
+        </ng-container>
+      </div>
+      <ion-button type="Submit" [disabled]="!loginForm.valid">Login</ion-button>
+    </form>
+    <div class="validation_messages">
+      {{loginMessage}}
     </div>
-    <ion-item>
-      <ion-input label="Solid input" label-placement="floating" fill="solid" placeholder="Enter text" type="password" formControlName="password" ></ion-input>
-    </ion-item>
-    <ion-button type="Submit" [disabled]="!loginForm.valid">Login</ion-button>
-</form>
-  <div class="validation_messages">
-    {{loginMessage}}
   </div>
-  
 </ion-content>

@@ -14,7 +14,7 @@ export class LoginPage implements OnInit {
   validation_messages ={
     email:[
       {type: "required", message:'El Email es obligatorio.'},
-      {type: "pattern", message:'El Email ingresado no es valido.'}
+      {type: "pattern", message:"El Email ingresado no es valido."}
     ],
     password:[
      {type: "minlength", message:"La contraseña es muy corta." }
@@ -24,7 +24,7 @@ export class LoginPage implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService,
-    private navController: NavController,
+    private navCtrl: NavController,
     private storage: Storage
   ) 
   { 
@@ -43,9 +43,7 @@ export class LoginPage implements OnInit {
         Validators.compose([
           Validators.minLength(8),
           Validators.required,
-          Validators.pattern(
-            "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$"
-          )
+         
         ])
       )  
     })
@@ -60,10 +58,14 @@ export class LoginPage implements OnInit {
     this.authService.loginUser(login_data).then(res => {
       this.loginMessage = res;
       this.storage.set('userLoggedIn', true)
-     this.navController.navigateForward('/home')
+     this.navCtrl.navigateForward('/home')
     }).catch(error =>{
       this.loginMessage = error;
     })
+  }
+  goToRegister(){
+    console.log('entre a register');
+    this.navCtrl.navigateForward('/register');
   }
 
 }

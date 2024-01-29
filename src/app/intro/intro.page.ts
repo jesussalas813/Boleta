@@ -42,13 +42,13 @@ export class IntroPage   {
     ) {}
   
   goToHome(){
-    console.log("go to intro");
-    this.router.navigateByUrl('/home')
+    console.log("go to login");
+    this.router.navigateByUrl('/login')
   }
 
   goToLogin(){
-    console.log("go to intro");
-    this.router.navigateByUrl('/login')
+    console.log("go to Register");
+    this.router.navigateByUrl('/register')
   }
 
   ionViewDidEnter (){

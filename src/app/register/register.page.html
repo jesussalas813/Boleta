@@ -1,13 +1,23 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header [translucent]="true">
     <ion-toolbar>
       <ion-title size="large">register</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div>
+    <form [formGroup]="registerForm" (ngSubmit)="register(registerForm.value)">
+      <ion-item>
+        <ion-input label="Email" label-placement="floating" fill="outline" placeholder="Enter email"
+          formControlName="email"></ion-input>
+      </ion-item>
+      <ion-button
+      expand="full"
+      shape="round"
+      color="success"
+      [disabled]="!registerForm.valid"
+      type="submit"
+    ></ion-button>
+      
+    </form>
+  </div>
 </ion-content>

@@ -20,7 +20,7 @@
       </div>
       <br>
       <ion-item>
-        <ion-input label="Solid input" label-placement="floating" fill="solid" placeholder="Enter text" type="password"
+        <ion-input label="password" label-placement="floating" fill="outline" placeholder="Enter text" type="password"
           formControlName="password"></ion-input>
       </ion-item>
       <div>
@@ -32,7 +32,10 @@
         </ng-container>
       </div>
       <ion-button type="Submit" [disabled]="!loginForm.valid">Login</ion-button>
+      <p>Si aun no se encuentra resgistrado registrese en el siguiente link</p>
+      <a href="/register">Registrate</a>
     </form>
+   
     <div class="validation_messages">
       {{loginMessage}}
     </div>

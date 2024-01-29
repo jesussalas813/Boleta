@@ -17,7 +17,8 @@ export class LoginPage implements OnInit {
       {type: "pattern", message:"El Email ingresado no es valido."}
     ],
     password:[
-     {type: "minlength", message:"La contraseña es muy corta." }
+     {type: "minlength", message:'La contraseña es muy corta.'},
+     {type: "required", message:'La contraseña es obligatorio.'}
     ]
   }
   loginMessage: any;

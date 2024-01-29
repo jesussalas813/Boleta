@@ -20,7 +20,8 @@ export class RegisterPage implements OnInit {
      {type: "required", message:'La contraseña es obligatorio.'}
     ],
     confirmation_password:[
-      {type: "required", message:'La contraseña es obligatorio.'}
+      {type: "required", message:'La contraseña es obligatorio.'},
+      {type: "noCoincide", message: 'Las contraseñas no coinciden.'}
      ],
      name:[
       {type: "required", message:'el nombre de usuario es obligatorio.'}
@@ -74,7 +75,23 @@ export class RegisterPage implements OnInit {
           Validators.pattern('^[a-zA-Z0-9_.+-]')
         ])
       )
+    },{
+        validator: this.confirm_pass('password', 'confirmation_password')
     })
+    }
+
+    confirm_pass(passwordControlname: string, confirmation_passwordControlname: string){
+      return(formGroup: FormGroup) =>{
+        const passwordControl = formGroup.controls[passwordControlname];
+        const confirmation_passwordControl = formGroup.controls[confirmation_passwordControlname];
+        
+        if (passwordControl.value !== confirmation_passwordControl.value) {
+          confirmation_passwordControl.setErrors({ noCoincide: true });
+        } else {
+          confirmation_passwordControl.setErrors(null);
+        }
+      }
+
     }
 
   ngOnInit() {

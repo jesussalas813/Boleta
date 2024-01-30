@@ -11,14 +11,15 @@ import { Storage } from '@ionic/storage-angular';
 export class LoginGuard implements CanActivate {
   constructor(
     private storage: Storage,
-    private navController: NavController
+    private navCtrl: NavController
     ){}
   async canActivate(){
+    this.navCtrl.navigateRoot('/intro');
     const userLoggedIn = await  this.storage.get('userLoggedIn');
     if(userLoggedIn)  {
       return true;
     }else{
-      this.navController.navigateForward('/login');
+      this.navCtrl.navigateForward('/login');
       return false;
     }
   }

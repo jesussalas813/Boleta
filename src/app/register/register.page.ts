@@ -16,11 +16,11 @@ export class RegisterPage implements OnInit {
       {type: "pattern", message:"El Email ingresado no es valido."}
     ],
     password:[
-     {type: "minlength", message:'La contraseña es muy corta.'},
-     {type: "required", message:'La contraseña es obligatorio.'}
+     {type: "minlength", message:'La contraseña debe tener minimo 8 caracteres.'},
+     {type: "required", message:'La contraseña es obligatorio.'},
+     {type: "pattern", message:'La contraseña debe contener minimo una mayuscula, una minuscula, un numero y un caracter especial'}
     ],
     confirmation_password:[
-      {type: "required", message:'La contraseña es obligatorio.'},
       {type: "noCoincide", message: 'Las contraseñas no coinciden.'}
      ],
      name:[
@@ -50,9 +50,9 @@ export class RegisterPage implements OnInit {
       password: new FormControl(
         "",
         Validators.compose([
-          Validators.minLength(5),
+          Validators.minLength(8),
           Validators.required,
-          Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$')
+          Validators.pattern('/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/')
         ])
       ),
       confirmation_password: new FormControl(

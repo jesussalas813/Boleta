@@ -20,8 +20,8 @@ export class IntroGuard implements CanActivate {
     if (mostreIntro) {
       return true;
     } else {
-      this.router.navigateByUrl('/intro');
-      return false;
+      //this.router.navigateByUrl('/intro');
+      return true;
     }
   }
     

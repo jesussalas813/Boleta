@@ -52,7 +52,7 @@ export class IntroPage   {
   }
 
   ionViewDidEnter (){
-    this.storage.set('mostreLaIntro', true);
+    
 
     
   }

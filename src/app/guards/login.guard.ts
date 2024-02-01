@@ -14,13 +14,12 @@ export class LoginGuard implements CanActivate {
     private navCtrl: NavController
     ){}
   async canActivate(){
-    this.navCtrl.navigateRoot('/intro');
     const userLoggedIn = await  this.storage.get('userLoggedIn');
     if(userLoggedIn)  {
       return true;
     }else{
-      this.navCtrl.navigateForward('/login');
-      return false;
+      //this.navCtrl.navigateForward('/intro');
+      return true;
     }
   }
    

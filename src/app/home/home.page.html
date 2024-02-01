@@ -1,11 +1,22 @@
-<div class="home">
-    <div class="title">
-        <h1>Welcome To Home</h1>
-    </div>
-    <div class="foot">
-        <ion-footer>
-            <ion-button size="large" color="light" class="bottom" fill="outline" (click)="goToIntro()">Ver
-                Intro</ion-button>
-        </ion-footer>
-    </div>
-</div>
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="end">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-content>
+        <swiper-container
+        [pagination]="true"
+        
+        >
+            <swiper-slide *ngFor="let slide of event_list">
+                <img src="{{slide.image}}">
+            </swiper-slide>
+        </swiper-container>
+    
+    </ion-content>
+
+</ion-content>

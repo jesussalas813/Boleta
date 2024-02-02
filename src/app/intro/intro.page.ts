@@ -11,11 +11,11 @@ export class IntroPage   {
 
   slides = [
     {
-      head: "../../assets/images/cine.png",
-      title: "Welcome to Mytickets!",
-      image: "../../assets/images/tikets.png",
-      description: "<b>¡ La opotunidad de conseguir tu boleta !</b> a la felicidad al alcance de un click",
-      help_text: "<b>¡ Registrate ahora para empezar a comprar tus boletas ! </b>"
+      head: "../../assets/images/entradas.png",
+      title: "<b>Welcome to Mytickets!</b>",
+      image: "",
+      description: "",
+      help_text: "<b>¡ La opotunidad de conseguir tu boleta ..!</b>  a la felicidad al alcance de un click"
       
     },
     {

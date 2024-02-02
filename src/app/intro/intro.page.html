@@ -1,4 +1,4 @@
-<ion-content [fullscreen]="true">
+<ion-content class="content" [fullscreen]="true">
   <ion-fab slot="fixed" horizontal="end" [edge]="true">
     <ion-fab-button (click)="goToHome()">
       <ion-icon name="close-outline"></ion-icon>
@@ -6,20 +6,21 @@
   </ion-fab>
   <swiper-container [loop]="true">
     <swiper-slide *ngFor="let slide of slides; let i = index">
-      <div *ngIf="i ==0">
-        <h1 class="red-title">{{slide.title}}</h1>
-        <div class="item"><img class="head" src={{slide.head}} /></div>
+      <div *ngIf="i ==0" class="slide">
         <ion-grid>
-          <ion-row>
+          <ion-row class="ion-align-items-center" >
             <ion-col>
-              <p class={{slide.class}} [innerHTML]="slide.description"></p>
+              <h1 class="red-title" [innerHTML]="slide.title"></h1>
+              <br>
+              <div class="item"><img class="head" src={{slide.head}} /></div>
             </ion-col>
-            <ion-col class="icons">
-              <img src={{slide.image}} />
+          </ion-row>
+          <ion-row  class="foot-text">
+            <ion-col>
+              <p class="text" [innerHTML]="slide.help_text"> </p>
             </ion-col>
           </ion-row>
         </ion-grid>
-        <p class="text" [innerHTML]="slide.help_text"> </p>
       </div>
       <div *ngIf=" i == 1">
         <h1 class="red-title" >{{slide.title}}</h1>

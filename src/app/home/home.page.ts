@@ -11,6 +11,7 @@ import { EventsService } from '../services/events.service';
 
 export class HomePage {
   event_list:  any;
+  categoria: any;
   constructor(
     private router:Router,
     private storage: Storage,
@@ -24,6 +25,12 @@ export class HomePage {
   }
   
   ionViewDidEnter(){
+    this.events.getCategories().then(
+      rest => {
+        this.categoria = rest;
+        console.log("categorias", this.categoria)
+      }
+    );
     this.events.getEvents().then(
       res =>{
         this.event_list = res;

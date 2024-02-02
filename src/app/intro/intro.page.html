@@ -6,37 +6,38 @@
   </ion-fab>
   <swiper-container [loop]="true">
     <swiper-slide *ngFor="let slide of slides; let i = index">
-      <div *ngIf="i ==0" class="slide">
+      <div *ngIf="i ==0" >
         <ion-grid>
           <ion-row class="ion-align-items-center" >
             <ion-col>
               <h1 class="red-title" [innerHTML]="slide.title"></h1>
-              <br>
               <div class="item"><img class="head" src={{slide.head}} /></div>
             </ion-col>
           </ion-row>
-          <ion-row  class="foot-text">
+          <ion-row  >
             <ion-col>
+              <p class={{slide.class}} [innerHTML]="slide.description"></p>
               <p class="text" [innerHTML]="slide.help_text"> </p>
             </ion-col>
           </ion-row>
         </ion-grid>
       </div>
       <div *ngIf=" i == 1">
-        <h1 class="red-title" >{{slide.title}}</h1>
-        <div class="item"><img src={{slide.head}} /></div>
+        
         <ion-grid>
+          <ion-row>
+            <ion-col>
+              <h1 class="red-title" >{{slide.title}}</h1>
+               <div class="item"><img src={{slide.head}} /></div>
+            </ion-col>
+          </ion-row>
           <ion-row>
             <ion-col>
               <p class={{slide.class}} [innerHTML]="slide.description"></p>
             </ion-col>
-            <ion-col class="icons">
-              <img src={{slide.image}} />
-            </ion-col>
           </ion-row>
         </ion-grid>
-        <div class="item"><img src={{slide.image1}} /></div>
-              <p class="text" [innerHTML]="slide.help_text"> </p>
+              
       </div>
       <div *ngIf="i == 2">
         <h1 class="red-title">{{slide.title}}</h1>

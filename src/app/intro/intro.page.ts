@@ -14,23 +14,20 @@ export class IntroPage   {
       head: "../../assets/images/entradas.png",
       title: "<b>Welcome to Mytickets!</b>",
       image: "",
-      description: "",
-      help_text: "<b>¡ La opotunidad de conseguir tu boleta ..!</b>  a la felicidad al alcance de un click"
+      description: "<b>¡ La opotunidad de conseguir tu boleta ..!</b> ",
+      help_text: " a la felicidad al alcance de un click"
       
     },
     {
       title: "Easy to use !",
-      description: "Consulta tus eventos favoritos y aparta tus entradas.",
-      head: "../../assets/images/etapa.png",
-      help_text: "<b>Consigue las boletas a los eventos que no te puedes perder tan facil como 1,2,3,4.</b> ",
-      image: "../../assets/images/teatro.png",
-      image1: "../../assets/images/concierto.png",
+      description: "Consulta tus eventos favoritos y aparta tus entradas, consigue las boletas a los eventos que no te puedes perder tan facil como 1,2,3,4.",
+      head: "",
       class:""
     },
     {
       title: "All events in one place",
       description: "No esperes mas registrate y empieza a disfrutar",
-      image: "../../assets/images/estadio.png",
+      image: "",
       help_text: "Desde eventos deportivos, peliculas, obras de teatros, conciertos, fiestas, etc. entra y busca el evento de tu preferencia",
       
     }

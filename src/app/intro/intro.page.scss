@@ -11,12 +11,14 @@ ion-fab-button {
   
  
   swiper-slide {
-    display: flex;
+    display: block;
     flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    padding-top: 51% ;
   }
-  .foot-text {
-    align-self: flex-end;
-  }
+
+ 
 
  
 
@@ -31,17 +33,16 @@ ion-fab-button {
   }
   p {
     color: rgb(227, 221, 220);
-    text-align: start;
-    justify-content: center;
-    font-size: 18px;
+    text-align: center;
+    justify-content: end;
+    font-size: 17px;
+    margin: 0px;
   }
 
   .text {
     color: rgb(227, 221, 220);
-    text-align: center;
-    justify-content: end;
-    font-size: 18px;
-    padding: 5px 10px 30px 5px;
+    padding-top: -15px;
+    font-size: 18px;;
   }
   .text1 {
    

@@ -10,28 +10,21 @@
     <ion-content>
         <ion-list>
             <ion-item>
-              <ion-select
-                interface="popover"
-                toggleIcon="add"
-                expandedIcon="remove"
-                aria-label="fruit"
-                placeholder="Select fruit"
-              >
-                <ion-select-option value="apples">Deportes</ion-select-option>
-                <ion-select-option value="oranges">Cinema</ion-select-option>
-                <ion-select-option value="bananas"></ion-select-option>
+              <ion-select [(ngModel)]="option" interface="popover"  class="always-flip"
+              toggleIcon="caret-down-sharp"  placeholder="Select categories" (ionChange)="selectoption($event)">
+                <ion-select-option  *ngFor="let opcion of categoria" [value]="opcion.id"> {{ opcion.name }} </ion-select-option>
               </ion-select>
             </ion-item>
           </ion-list>
-        <swiper-container
-        [pagination]="true"
-        
-        >
+         
+        <swiper-container [pagination]="true">
             <swiper-slide *ngFor="let slide of event_list">
+                <h1 [innerHTML]="slide.name"></h1>
                 <img src="{{slide.image}}">
+                
             </swiper-slide>
         </swiper-container>
-    
+   
     </ion-content>
 
 </ion-content>

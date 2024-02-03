@@ -25,29 +25,22 @@
   text-decoration: none;
 }
 
+div {
+  max-width: 00px;
+  margin: 0 auto; 
+  padding: 20px;
+}
 .home {
   background: #DD8A12;
   height: 100%;
 }
-.title{
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  height: 50%;
-}
+
 
 h1{
-  font-size: 28px;
+  font-size: 20px;
   color: #FFFFFF;
 }
 
-.foot {
-  display: flex;
-  align-items: end;
-  text-align: center;
-  height: 50%;
-}
 
-.bottom {
-  width: 100%;
-}
+
+

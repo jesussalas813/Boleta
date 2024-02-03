@@ -13,7 +13,13 @@ export class EventsService {
     );
   }
   getCategories(){
-    return fetch(`${this.urlServer}/events.category_id`).then(
+    return fetch(`${this.urlServer}/categories`).then(
+      response => response.json()
+    );
+  }
+
+  getId(){
+    return fetch(`${this.urlServer}/categories/id`).then(
       response => response.json()
     );
   }

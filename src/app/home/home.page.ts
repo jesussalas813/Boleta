@@ -12,6 +12,7 @@ import { EventsService } from '../services/events.service';
 export class HomePage {
   event_list:  any;
   categoria: any;
+  option: any;
   constructor(
     private router:Router,
     private storage: Storage,
@@ -24,13 +25,23 @@ export class HomePage {
     this.storage.set('mostreLaIntro', true);
   }
   
-  ionViewDidEnter(){
+  categorias(){
     this.events.getCategories().then(
       rest => {
         this.categoria = rest;
         console.log("categorias", this.categoria)
       }
     );
+  }
+  selectoption(event:any){
+    this.option = event.detail.value;
+    console.log("la opcion seleccionada", event.detail.value);
+  }
+
+
+  ionViewDidEnter(){
+    this.categorias();
+    
     this.events.getEvents().then(
       res =>{
         this.event_list = res;

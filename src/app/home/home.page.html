@@ -8,7 +8,7 @@
 <ion-content>
     <ion-content>
         <ion-list>
-            <ion-item>
+            <ion-item fill="outline">
                 <ion-select [(ngModel)]="option" interface="popover" class="always-flip" toggleIcon="caret-down-sharp"
                     placeholder="Select categories" (ionChange)="selectoption($event)">
                     <ion-select-option *ngFor="let opcion of categoria" [value]="opcion.id"> {{ opcion.name }}
@@ -16,9 +16,9 @@
                 </ion-select>
             </ion-item>
         </ion-list>
-        <swiper-container [pagination]="true">
+        <br>
+        <swiper-container [slidesPerView]="2">
             <swiper-slide *ngFor="let slide of event_list">
-                <h1 [innerHTML]="slide.name"></h1>
                 <img src="{{slide.image}}">
             </swiper-slide>
         </swiper-container>

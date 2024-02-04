@@ -8,8 +8,8 @@
       </ion-fab>
       <h1>Registrese</h1>
       <ion-item>
-        <ion-input label="Email" label-placement="floating" fill="outline" placeholder="Enter email"
-          formControlName="email"></ion-input>
+        <ion-input label="Email" label-placement="stacked" fill="outline" placeholder="Enter email"
+          formControlName="email"><ion-icon slot="start" name="mail" aria-hidden="true"></ion-icon></ion-input>
       </ion-item>
       <div>
         <ng-container *ngFor="let validation of validation_messages.email">
@@ -19,10 +19,9 @@
             ">{{validation.message}}</div>
         </ng-container>
       </div>
-      <br>
       <ion-item>
-        <ion-input label="Name" label-placement="floating" fill="outline" placeholder="Enter Name"
-          formControlName="name"></ion-input>
+        <ion-input label="Name" label-placement="stacked" fill="outline" placeholder="Enter Name"
+          formControlName="name"><ion-icon slot="start" name="person" aria-hidden="true"></ion-icon></ion-input>
       </ion-item>
       <div>
         <ng-container *ngFor="let validation of validation_messages.name">
@@ -32,10 +31,9 @@
             ">{{validation.message}}</div>
         </ng-container>
       </div>
-      <br>
       <ion-item>
-        <ion-input label="Last Name" label-placement="floating" fill="outline" placeholder="Enter Last Name"
-          formControlName="last_name"></ion-input>
+        <ion-input label="Last Name" label-placement="stacked" fill="outline" placeholder="Enter Last Name"
+          formControlName="last_name"><ion-icon slot="start" name="people" aria-hidden="true"></ion-icon></ion-input>
       </ion-item>
       <div>
         <ng-container *ngFor="let validation of validation_messages.name">
@@ -45,10 +43,9 @@
             ">{{validation.message}}</div>
         </ng-container>
       </div>
-      <br>
       <ion-item>
-        <ion-input label="password" label-placement="floating" fill="outline" placeholder="Enter text" type="password"
-          formControlName="password"></ion-input>
+        <ion-input label="password" label-placement="stacked" fill="outline" placeholder="Enter text" type="password"
+          formControlName="password"><ion-icon slot="start" name="lock-open" aria-hidden="true"></ion-icon></ion-input>
       </ion-item>
       <div>
         <ng-container *ngFor="let validation of validation_messages.password">
@@ -58,10 +55,9 @@
             ">{{validation.message}}</div>
         </ng-container>
       </div>
-      <br>
       <ion-item>
-        <ion-input label="Password Confirmation" label-placement="floating" fill="outline" placeholder="Enter text"
-          type="password" formControlName="confirmation_password"></ion-input>
+        <ion-input label="Password Confirmation" label-placement="stacked" fill="outline" placeholder="Enter text"
+          type="password" formControlName="confirmation_password"><ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon></ion-input>
       </ion-item>
       <div>
         <ng-container *ngFor="let validation of validation_messages.confirmation_password">
@@ -71,8 +67,8 @@
             ">{{validation.message}}</div>
         </ng-container>
       </div>    
-      <br>
-      <ion-button expand="full" shape="round"  fill="outline" [disabled]="!registerForm.valid" type="submit"></ion-button>
+     
+      <ion-button shape="round" color="light" fill="outline"  type="submit">Registrarse</ion-button>
     </form>
   </div>
 </ion-content>

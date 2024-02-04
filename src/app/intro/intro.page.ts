@@ -21,14 +21,15 @@ export class IntroPage   {
     {
       title: "Easy to use !",
       description: "Consulta tus eventos favoritos y aparta tus entradas, consigue las boletas a los eventos que no te puedes perder tan facil como 1,2,3,4.",
-      head: "",
+      head: "../../assets/images/cinema.png",
       class:""
     },
     {
       title: "All events in one place",
-      description: "No esperes mas registrate y empieza a disfrutar",
+      head: "../../assets/images/deportes.png",
+      description: "<b>No esperes mas registrate y empieza a disfrutar</b>",
       image: "",
-      help_text: "Desde eventos deportivos, peliculas, obras de teatros, conciertos, fiestas, etc. entra y busca el evento de tu preferencia",
+      help_text: "Encuentra boletas para peliulas, conciertos, eventos deportivos y mucho mas.",
       
     }
   ]
@@ -48,11 +49,7 @@ export class IntroPage   {
     this.router.navigateByUrl('/register')
   }
 
-  ionViewDidEnter (){
-    
 
-    
-  }
 
   
 

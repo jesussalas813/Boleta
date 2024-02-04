@@ -17,8 +17,7 @@ export class RegisterPage implements OnInit {
     ],
     password:[
      {type: "minlength", message:'La contraseña debe tener minimo 8 caracteres.'},
-     {type: "required", message:'La contraseña es obligatorio.'},
-     {type: "pattern", message:'La contraseña debe contener minimo una mayuscula, una minuscula, un numero y un caracter especial'}
+     {type: "required", message:'La contraseña es obligatorio.'}
     ],
     confirmation_password:[
       {type: "noCoincide", message: 'Las contraseñas no coinciden.'}
@@ -52,7 +51,6 @@ export class RegisterPage implements OnInit {
         Validators.compose([
           Validators.minLength(8),
           Validators.required,
-          Validators.pattern('/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/')
         ])
       ),
       confirmation_password: new FormControl(

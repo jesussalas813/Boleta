@@ -1,5 +1,6 @@
-ion-content{
+ion-content {
     --background: url('../../assets/images/login.png') center center / 100% 100% no-repeat;
+    padding-top: 40px;
 }
 
 form {
@@ -10,13 +11,15 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    margin:  20px 0px 20px 0px;
+    padding-top: 20px;
+    margin: 20px 0px 20px 0px;
 }
 
 h1 {
     color: white;
     size: 28px;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 ion-fab-button {
@@ -24,6 +27,19 @@ ion-fab-button {
     --background-activated: #F9F7F7;
 }
 
-ion-item{
+ion-item {
     --background: transparent;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+ion-button {
+    margin-top: 20px;
+    width: 100%;
+
+}
+
+ion-input {
+    width: 100%;
 }

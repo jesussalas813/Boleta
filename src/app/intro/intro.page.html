@@ -41,10 +41,11 @@
       </div>
       <div *ngIf="i == 2">
         <h1 class="red-title">{{slide.title}}</h1>
+        <div class="item"><img class="head" src={{slide.head}} /></div>
         <p class="text">{{slide.help_text}}</p>
-        <div class="item"><img src={{slide.image}} /></div>
         <p class="text" [innerHTML]="slide.description"></p>
-          <ion-button size="large" color="light" class="bottom" fill="outline" (click)="goToLogin()" >Ver Intro</ion-button>
+        <br>
+          <ion-button size="large" color="light" class="bottom" fill="outline" (click)="goToLogin()" >Registrese</ion-button>
       </div>
     </swiper-slide>
   </swiper-container>

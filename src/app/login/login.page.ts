@@ -11,14 +11,14 @@ import { Storage } from '@ionic/storage-angular';
 })
 export class LoginPage implements OnInit {
   loginForm: FormGroup;
-  validation_messages ={
-    email:[
-      {type: "required", message:'El Email es obligatorio.'},
-      {type: "pattern", message:"El Email ingresado no es valido."}
+  validation_messages = {
+    email: [
+      { type: "required", message: 'El Email es obligatorio.' },
+      { type: "pattern", message: "El Email ingresado no es valido." }
     ],
-    password:[
-     {type: "minlength", message:'La contraseña es muy corta.'},
-     {type: "required", message:'La contraseña es obligatorio.'}
+    password: [
+      { type: "minlength", message: 'La contraseña ingresada no es valida.' },
+      { type: "required", message: 'La contraseña es obligatoria.' }
     ]
   }
   loginMessage: any;
@@ -27,8 +27,7 @@ export class LoginPage implements OnInit {
     private authService: AuthService,
     private navCtrl: NavController,
     private storage: Storage
-  ) 
-  { 
+  ) {
     this.loginForm = this.formBuilder.group({
       email: new FormControl(
         "",
@@ -44,9 +43,9 @@ export class LoginPage implements OnInit {
         Validators.compose([
           Validators.minLength(8),
           Validators.required,
-         
+
         ])
-      )  
+      )
     })
   }
 
@@ -54,19 +53,21 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  login(login_data: any){
+  login(login_data: any) {
     console.log(login_data);
     this.authService.loginUser(login_data).then(res => {
       this.loginMessage = res;
       this.storage.set('userLoggedIn', true)
-     this.navCtrl.navigateForward('menu/home')
-    }).catch(error =>{
+      this.navCtrl.navigateForward('menu/home')
+    }).catch(error => {
       this.loginMessage = error;
     })
   }
-  goToRegister(){
+
+  goToRegister() {
     console.log('entre a register');
     this.navCtrl.navigateForward('/register');
   }
+  
 
 }

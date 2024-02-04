@@ -1,24 +1,27 @@
-ion-content{
-    --background: #DD8A12;
-    width: 100%;
-    height: 100%;
-}
-form {
-    max-width: 400px;
-    margin: 0 auto; 
-    padding: 20px;
+.content {
+    --background: url('../../assets/images/login.png') center center / 100% 100% no-repeat;
+   
 }
 
-ion-toolbar{
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: block;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin:  20px 0px 20px 0px;
+}
+
+h1 {
+    color: white;
+    size: 28px;
+}
+
+ion-item {
     --background: transparent;
 }
-a {
-    color: black;
-}
-ion-item{
-    --background: transparent;
-}
-ion-input {
-    border-color: white;
-    border: 5px 5px;
-}
+

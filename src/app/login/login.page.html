@@ -1,40 +1,39 @@
-<ion-content [fullscreen]="true">
-  <ion-header [translucent]="true">
-    <ion-toolbar>
-      <ion-title>login</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="content" [fullscreen]="true">
   <div class="login ">
     <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+      <h1>Iniciar Sesion</h1>
+      <img src="../../assets/images/palomita.png"
+        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
       <ion-item>
-        <ion-input label="Email" label-placement="floating" fill="outline" placeholder="Enter email"
-          formControlName="email"></ion-input>
+        <ion-input label="Email" label-placement="stacked" fill="outline" placeholder="Enter email"
+          formControlName="email"><ion-icon slot="start" name="mail" aria-hidden="true"></ion-icon></ion-input>
       </ion-item>
       <div>
         <ng-container *ngFor="let validation of validation_messages.email">
           <div *ngIf="
             (loginForm.get('email')?.hasError(validation.type) &&
             loginForm.get('email')?.dirty)
-            ">{{validation.message}}</div>
+            "><ion-icon slot="start" name="information-circle"></ion-icon>{{validation.message}}</div>
         </ng-container>
       </div>
       <br>
       <ion-item>
-        <ion-input label="password" label-placement="floating" fill="outline" placeholder="Enter text" type="password"
-          formControlName="password"></ion-input>
+        <ion-input label="password" label-placement="stacked" fill="outline" placeholder="Enter text" type="password"
+          formControlName="password"><ion-icon slot="start" name="lock-open"></ion-icon></ion-input>
       </ion-item>
       <div>
         <ng-container *ngFor="let validation of validation_messages.password">
           <div *ngIf="
             (loginForm.get('password')?.hasError(validation.type) &&
             loginForm.get('password')?.dirty)
-            ">{{validation.message}}</div>
+            "><ion-icon slot="start" name="information-circle"></ion-icon>{{validation.message}}</div>
         </ng-container>
       </div>
-      <ion-button color="light" expand="full" shape="round" type="Submit" fill="outline"  [disabled]="!loginForm.valid">Login</ion-button>
+      <br>
+      <ion-button expand="full" color="dark" shape="round" type="Submit" fill="outline"
+        [disabled]="!loginForm.valid">Login</ion-button>
       <p>Si aun no se encuentra resgistrado registrese en el siguiente link <a href="/register">Registrate</a></p>
-      
+      <div class="validation_messages">{{loginMessage}}</div>
     </form>
-    <div class="validation_messages">{{loginMessage}}</div>
   </div>
 </ion-content>

@@ -8,10 +8,13 @@
     "alcance",
     "aparta",
     "conseguir",
+    "contraseña",
     "mostre",
     "Mytickets",
     "opotunidad",
     "Registrate",
-    "swiper"
-  ]
+    "swiper",
+    "valido"
+  ],
+  "editor.linkedEditing": true
 }
